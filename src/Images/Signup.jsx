@@ -42,33 +42,37 @@ function Signup(props) {
     setconfirmpassword("");
   }
   return (
-    <div className="bg-black p-10">
-      <div className="bg-[#EFEFEF] p-10 border rounded-md">
+    <div className="bg-black min-h-screen flex items-center justify-center">
+      <div className="bg-[#EFEFEF] w-96 p-10 border rounded-md">
         <h1 className="text-3xl font-medium">Hey Hi</h1>
-        {registeruser ? (
-          <p className="mt-1">Join Us🚀</p>
-        ) : (
-          <p>Registered Successfully🎉 </p>
-        )}
+
+        {/* Reserve fixed height for message */}
+        <div className="h-10">
+          {registeruser ? (
+            <p className="mt-1">Join Us🚀</p>
+          ) : (
+            <p>Registered Successfully🎉</p>
+          )}
+        </div>
 
         <div className="flex flex-col gap-2 mt-3">
           <input
             type="text"
-            className="w-52 p-2 border rounded-md border-black bg-transparent "
+            className="w-full p-2 border rounded-md border-black bg-transparent"
             placeholder="Username"
             value={newusers}
             onChange={handleusername}
           />
           <input
             type="password"
-            className="w-52 p-2 border rounded-md border-black bg-transparent "
+            className="w-full p-2 border rounded-md border-black bg-transparent"
             placeholder="Password"
             value={newpassword}
             onChange={handleuserpassword}
           />
           <input
             type="password"
-            className="w-52 p-2 border rounded-md border-black bg-transparent "
+            className="w-full p-2 border rounded-md border-black bg-transparent"
             placeholder="Confirm Password"
             value={confirmpassword}
             onChange={handleconfirmpassword}
